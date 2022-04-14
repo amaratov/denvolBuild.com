@@ -1,0 +1,177 @@
+@import '../../../../assets/fonts';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/alert";
+@import "../../../UI/media";
+
+.BtnVar{
+  color:white;
+  padding: 10px;
+  border:none;
+  border-radius: 5px;
+  font-size: large;
+  background-color: $mainGrey;
+  span{
+    position: relative;
+    bottom: 7px;
+    margin-left: 10px;
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: black;
+  }
+}
+#fileSelect{
+  display: none;
+}
+#fileSelectLabel{
+  font-size: medium;
+}
+
+.highlight{
+  border:2px dashed black;
+}
+
+.ReviewModal{
+  transition: all .5s ease;
+  h1{
+    @extend .mainSemiBold;
+    margin: 0;
+    font-size: 2.1em;
+  }
+  &Close{
+    position: absolute;
+    right: 45px;
+    &:hover{
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+  //EmailForm
+  &Back{
+    position: absolute;
+    left: 45px;
+    &:hover{
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+
+  &EmailForm{
+    display: block;
+    width: 70%;
+    margin: 40px auto auto;
+  }
+
+  //emailFormEnd
+
+  .review{
+    width: 70%;
+    margin: 5px auto;
+    text-align: left;
+  }
+  .review-label{
+    @extend .mainRegular
+  }
+  #reviewTitle{
+    width: 100%;
+    background: transparent;
+    line-height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #666;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    padding: 0 20px;
+  }
+  textarea{
+    background: transparent;
+    line-height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #666;
+    transition: all 0.4s ease;
+    padding: 0 20px;
+    display: block;
+    outline: none;
+    resize: none;
+    height: 150px;
+    width: 100%;
+    margin: auto;
+    @extend .mainRegular;
+    font-size: 20px;
+  }
+  &Buttons{
+    //position: relative;
+    //top: 2em;
+    margin: 10px;
+    &Email{
+      @extend .BtnVar;
+      background-color: #005eff;
+
+    }
+    &Fb{
+      @extend .BtnVar;
+      background-color: #324ea9;
+    }
+    &Or{
+        position: relative;
+        bottom: 7px;
+        margin: 20px;
+    }
+
+  }
+}
+@include between(500px,768px){
+  .ReviewModal{
+    textarea,#reviewTitle,.review{
+      width:90%;
+    }
+  }
+}
+@include LessThan(500px){
+  .ReviewModal{
+    h1{
+      font-size: 1.1em;
+    }
+    .review{
+      width: 100%;
+    }
+    textarea,#reviewTitle{
+      width: 85%;
+    }
+    textarea{
+      font-size: 15px;
+      padding: 10px 20px 0;
+      line-height: 20px;
+    }
+
+    &Close{
+      right: 10px;
+    }
+    &Back{
+      left: 5px;
+    }
+
+    &Buttons{
+      margin: 25px 0;
+
+      &Or{
+        margin: 10px 0;
+        bottom:0;
+        display: block;
+      }
+    }
+  }
+  .BtnVar{
+    font-size: smaller;
+    span{
+      bottom: 2px;
+    }
+  }
+}

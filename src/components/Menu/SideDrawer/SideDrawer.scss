@@ -1,0 +1,28 @@
+@import "../../UI/media";
+
+.SideDrawer{
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 999999;
+  background-color: white;
+  padding: 80px 0;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+  border-left: 1px solid black;
+  &Open{
+    transform: translateX(0);
+  }
+  &Close{
+    transform: translateX(100%);
+  }
+}
+
+@include notMobile{
+  .SideDrawer{
+    display: none;
+  }
+}
+

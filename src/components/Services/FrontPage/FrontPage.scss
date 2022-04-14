@@ -1,0 +1,84 @@
+@import "../../../assets/fonts";
+@import "../../UI/media";
+
+#FrontPage{
+  h1{
+    @extend .mainExtraLight;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 3em;
+    margin: 0;
+    @include LessThan(730px){
+    top:0;
+    }
+  }
+  .Content{
+    height: 700px;
+    background-image: url("../../../assets/services/servicesBcground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.55);
+    background-blend-mode: color;
+    color:white;
+    text-align: center;
+    position: relative;
+    h2{
+      @extend .mainExtraLight;
+      margin: 0;
+      font-size: 2.5em;
+      position: relative;
+      top: 20px;
+      @include LessThan(730px){
+        top:0;
+      }
+      @include between(429px,623px){
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      @include LessThan(429px){
+        font-size: 1.7em;
+        margin-bottom: 50px;
+      }
+      @include LessThan(320px){
+        font-size: 1.5em;
+        margin:0 15px 10px;
+      }
+    }
+
+    ul{
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+      font-size: 1.5em;
+      @extend .mainMedium;
+      margin: 10%;
+
+      @include between(841px,1066px){
+        margin: 6%;
+      }
+      @include between(730px,841px){
+        margin: 12% 3%;
+      }
+      @include LessThan(730px){
+        width: 80%;
+        margin: auto;
+      }
+      @include between(429px,623px){
+        font-size: 1.4em;
+      }
+      @include LessThan(429px){
+        font-size: 1.2em;
+      }
+    }
+    li>:first-child{
+      float: left;
+      margin-right: 20px;
+    }
+    li{
+      margin: 5px;
+    }
+  }
+}
+

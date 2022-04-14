@@ -1,0 +1,57 @@
+@import "../../../../assets/fonts";
+@import "../../../UI/media";
+
+
+.Socials{
+  text-align: right;
+  @include mobile{
+    text-align: center;
+    margin-top: 20px;
+  }
+  &Links{
+    text-decoration: none;
+    color: white;
+    &>div{
+      width: 110px;
+      height: 110px;
+      display: inline-block;
+      text-align: center;
+      line-height: 110px;
+      &:hover{
+        transform: scale(1.1);
+      }
+      @include between(1222px,1333px){
+        width: 100px;
+        height: 100px;
+      }
+      @include between(818px,1222px){
+        width: 80px;
+        height: 95px;
+      }
+      @include between(767px,818px){
+        width: 70px;
+        height: 90px;
+      }
+    }
+    #fb{
+      background-color: #98999A;
+      margin-right: 10px;
+    }
+    #tw{
+      background-color: #8B8C8D;
+    }
+    #in{
+      background-color: #858687;
+      margin: 10px 10px 0 0;
+    }
+    #yp{
+      background-color: #7A7B7C;
+      margin-top: 10px;
+    }
+    @include between(767px,919px){
+      #fb,#in,#yp{
+        margin:0;
+      }
+    }
+  }
+}

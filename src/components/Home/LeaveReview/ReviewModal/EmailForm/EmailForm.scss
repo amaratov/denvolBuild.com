@@ -1,0 +1,58 @@
+@import '../../../../../assets/fonts';
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+.emailFormInput{
+  @extend .mainLight;
+  width: 100%;
+  border:0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3em;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder{
+    color:transparent;
+  }
+  &:placeholder-shown ~ .emailFormLabel{
+    font-size: 1.3em;
+    cursor: text;
+    top:-35px;
+  }
+
+}
+
+.emailFormLabel{
+  position: relative;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+  text-align: left;
+}
+
+.emailFormInput:focus{
+  +.emailFormLabel{
+    position: relative;
+    top: -55px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 700;
+  }
+
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right,$primary,$secondary);
+}
+
+.emailFormInput{
+  &:required,&:invalid { box-shadow:none; }
+}

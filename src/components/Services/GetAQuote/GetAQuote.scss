@@ -1,0 +1,32 @@
+@import "../../UI/media";
+
+#GetAQuote{
+  background-color: black;
+  color: white;
+  height: 150px;
+  text-align: center;
+  p{
+    margin: 45px;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 1.5em;
+    @include between(830px,900px){
+      margin: 45px 10px;
+    }
+    @include LessThan(830px){
+      font-size: 1.3em;
+   }
+  }
+  button{
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 0;
+    border: none;
+    padding: 15px;
+    position: relative;
+    bottom: 20px;
+    @include LessThan(830px){
+      font-size: 1.3em;
+    }
+  }
+}

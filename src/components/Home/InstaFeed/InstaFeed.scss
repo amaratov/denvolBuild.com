@@ -1,0 +1,19 @@
+@import "../../../assets/fonts";
+
+.InstaFeed{
+
+  & > h1{
+    @extend .mainSemiBold;
+    text-align: center;
+  }
+
+  & > .hideLogo{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    bottom: 50px;
+    z-index: 99999;
+  }
+}
+

@@ -1,0 +1,72 @@
+@import "../../../assets/fonts";
+@import "../../UI/media";
+
+
+.FrontPage{
+  position: relative;
+  height: 75vh;
+  background-image: url("../../../assets/home/bckg.jpeg");
+  background-size: cover;
+  background-position: top;
+
+  &Title{
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: white;
+    background-color: $transBlack;
+    h1{
+      @extend .mainMedium;
+      font-size: 35px;
+      margin: 0;
+    }
+  }
+
+  &EstBox{
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    margin: 10px;
+
+    h1{
+      @extend .mainSemiBold;
+      font-size: 40px;
+      margin-bottom: 0;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+      @extend .mainRegular;
+    }
+  }
+}
+
+@include LessThan(500px){
+  .FrontPage{
+    &Title{
+      h1{
+        font-size: 23px;
+        padding: 30px 0;
+      }
+    }
+    &EstBox{
+      h1{
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@include mobile{
+  .FrontPage{
+    &EstBox{
+      width: 100%;
+      margin: 0;
+      background-color: $transBlack;
+      h1,a{
+        color:white;
+      }
+    }
+  }
+}

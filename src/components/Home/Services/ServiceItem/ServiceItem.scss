@@ -1,0 +1,43 @@
+@import "../../../../assets/fonts";
+@import "../../../UI/media";
+.ServiceItem{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border: 1px solid black;
+  margin: 50px;
+  transition: all ease-out;
+  &:hover{
+    background-color: #84848478;
+    cursor: pointer;
+    img{
+      fill:red;
+    }
+  }
+  img{
+   width: 60%;
+   margin-top: 10%;
+  }
+  h3{
+    @extend .mainBold;
+    @include LessThan(545px){
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+  @include between(1030px,1207px){
+    margin: 20px;
+  }
+  @include between(545px,1030px){
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+  }
+  @include LessThan(545px){
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+  }
+}
+

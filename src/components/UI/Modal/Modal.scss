@@ -1,0 +1,36 @@
+@import "../media";
+
+.Modal{
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 700px;
+  text-align: center;
+  position: fixed;
+  z-index:999;
+  top:160px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  left: calc(50% - 350px);
+  max-height: 80vh;
+  overflow-y: auto;
+
+
+  @include tablet{
+    top:100px;
+  }
+  @include between(500px,768px){
+    width: 500px;
+    left: calc(50% - 250px);
+  }
+  @include LessThan(500px){
+    width: 100%;
+    left: 0;
+    top: 80px;
+  }
+  @include maxHeight(710px){
+    top:90px;
+  }
+}
+
+

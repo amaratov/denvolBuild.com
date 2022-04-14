@@ -1,0 +1,18 @@
+@import "../../../assets/fonts";
+@import "../../UI/media";
+
+.CustomerReviews{
+  height: 500px;
+  background-color: $mainCherry;
+  text-align: center;
+  padding: 20px;
+  @include LessThan(500px){height: 450px}
+  h2{
+    color:white;
+    @extend .mainMedium;
+  }
+}
+.Reviews{
+  padding: 0 40px;
+}
+@include LessThan(420px){.CustomerReviews,.Reviews{padding: 0;}}

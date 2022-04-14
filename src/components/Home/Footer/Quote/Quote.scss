@@ -1,0 +1,44 @@
+@import "../../../../assets/fonts";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/alert";
+@import "../../../UI/media";
+
+
+#Quote{
+  form>*{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+  }
+  input{
+    line-height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #666;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    padding: 0 20px;
+  }
+  textarea{
+    line-height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #666;
+    transition: all 0.4s ease;
+    padding: 0 20px;
+    display: block;
+    outline: none;
+    resize: none;
+    height: 150px;
+    @extend .mainRegular;
+    font-size: 20px;
+  }
+  button{
+    background-color: #658DA5;
+    color:white;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../assets/fonts";
+@import "../../UI/media";
+.Services{
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  h1{
+    @extend .mainSemiBold;
+    font-size: 4em;
+    margin: 0;
+    @include LessThan(820px){
+      font-size: 3em;
+    }
+    @include LessThan(420px){
+      font-size: 2em;
+    }
+  }
+  @include LessThan(1509px){
+    margin: 0;
+  }
+  @include LessThan(820px){
+    position: relative;
+    top: -46px;
+  }
+}

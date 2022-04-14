@@ -1,0 +1,13 @@
+.ScrollUp{
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
+  z-index: 100000;
+  background-color: #00000063;
+  color: white;
+  &:hover{
+    background-color: black;
+  }
+}
